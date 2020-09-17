@@ -8,9 +8,16 @@ If you use nix, `shell.nix` will create a build environment.
 ```
 nix-shell
 ```
+Otherwise install `wasm-pack` and it's dependencies from you package manager.
 
-Otherwise install `wasm-pack`.
-
+Build the package.
 ```
-wasm-pack build --release
+wasm-pack build --release --scope <package scope>
+```
+This will create a `pkg` directory with the compiled package.
+
+
+Publish for use in other projects
+```
+wasm-pack publish --access=public
 ```
